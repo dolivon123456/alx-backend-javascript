@@ -1,4 +1,4 @@
-function function getResponseFromAPI() {
+function getResponseFromAPI() {
 	return new promise((resolve, reject) => {
 	});
 }
