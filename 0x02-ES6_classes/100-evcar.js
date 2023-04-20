@@ -1,12 +1,14 @@
 import Car from './10-car';
 
 export default class EVCar extends Car {
-  constructor(brand = '', motor = '', color = '', range = '') {
+  constructor(brand, motor, color, range) {
     super(brand, motor, color);
-    this._range = range;
+    this.range = range;
   }
 
-  static get [Symbol.species]() {
-    return Car;
-  }
+  set range(value) { this._range = value; }
+
+  get range() { return this._range; }
+
+  static get [Symbol.species]() { return Car; }
 }
