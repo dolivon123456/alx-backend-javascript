@@ -1,15 +1,10 @@
-export default function updateStudentGradeByCity(students, city, newGrades) {
-  if (Array.isArray(students) && Array.isArray(newGrades)) {
-    const cityStudents = students.filter((student) => student.location === city);
-    return cityStudents.map((student) => {
-      const newGrade = newGrades.find((g) => g.studentId === student.id);
-      if (newGrade === undefined) {
-        student.grade = 'N/A';
-      } else {
-        student.grade = newGrade.grade;
-      }
-      return student;
-    });
-  }
-  return [];
+export default function updateStudentGradeByCity(students, city, newGrade) {
+  const newArray = students.map((student) => {
+    const studentGrade = newGrade
+      .filter((element) => element.studentId === student.id)
+      .map((x) => x.grade)[0];
+    student['grade'] = studentGrade || 'N/A';
+    return student;
+  });
+  return newArray.filter((element) => element.location === city);
 }
