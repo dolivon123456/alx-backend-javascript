@@ -1,0 +1,19 @@
+{
+  "name": "unittests_in_js",
+  "version": "1.0.0",
+  "description": "A project for practicing Node js Applicaton Testing",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "sinon": "^15.1.2"
+  },
+  "devDependencies": {
+    "eslint-plugin-jest": "^27.2.1",
+    "mocha": "^10.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Joshua Aigbiremhon",
+  "license": "ISC"
+}
